@@ -1,0 +1,33 @@
+# Overview
+
+## Objective
+
+To learn about MongoDB and Atlas, and use them to perform CRUD operations for projects. Key content such as aggregation, indexing, data modeling, and transactions are covered.
+
+## Contents
+
+ - 01 Getting started with MongoDB Atlas, the Developer Data Platform
+
+ - 02 Overview of MongoDB and the Document Model
+
+ - 03 Connecting to a MongoDB Database
+
+ - 04 MongoDB CRUD Operations: Insert and Find Documents
+
+ - 05 MongoDB CRUD: Replace and Delete
+
+ - 06 MongoDB CRUD Operations: Modifying Query Results
+
+ - 07 MongoDB Aggregation
+
+ - 08 MongoDB Indexing
+
+ - 09 MongoDB Atlas Search
+
+ - 10 Introduction to MongoDB Data Modeling
+
+ - 11 MongoDB Transactions
+
+## IDE
+
+This course uses online IDE to conduct labs and lessons. When connected to DB, use `db.help()` to display a list of commands used with DB.
