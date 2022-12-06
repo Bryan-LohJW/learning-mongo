@@ -151,7 +151,7 @@ Comparison operators
 Will only return documents that have the query value within an array, not a single element
 
 ```sh
-db.<collection>.find({"<field>": {$elemMatch: {#eq:<value>"}}})
+db.<collection>.find({"<field>": {$elemMatch: {$eq:<value>}}})
 
 db.<collection>.find({"<field>": {$elemMatch: {<query1>,<query2>,...}}})
 ```
