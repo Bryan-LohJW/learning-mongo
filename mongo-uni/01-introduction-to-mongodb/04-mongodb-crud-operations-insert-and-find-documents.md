@@ -156,7 +156,7 @@ db.<collection>.find({"<field>": {$elemMatch: {$eq:<value>}}})
 db.<collection>.find({"<field>": {$elemMatch: {<query1>,<query2>,...}}})
 ```
 
-[[Screenshot of code](learning-mongo\mongo-uni\01-introduction-to-mongodb\Resources\04-01.png)]
+![Screenshot of code](Resources\04-01.png)
 
 ## Logical operators
 
@@ -176,4 +176,4 @@ Or operator
 find.<collection>.find({$or: [<expression1>,<expression2>]})
 ```
 
-[[Screenshot of code](learning-mongo\mongo-uni\01-introduction-to-mongodb\Resources\04-02.png)]
+![Screenshot of code](Resources\04-02.png)
