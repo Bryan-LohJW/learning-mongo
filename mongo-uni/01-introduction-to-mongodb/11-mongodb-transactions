@@ -1,0 +1,47 @@
+# Transactions
+
+## ACID Transactions
+
+Why transactions are necessary? A single action may need multiple database operations, therefore need all the operations to happen all together, or not at all.
+
+ACID Transactions are a group of database operations that will be completed as a unit or not at all.
+
+ACID (Atomicity, Consistency, Isolation, Durability)
+
+Atomicity - All operations will either succeed or fail together
+
+Consistency - All changes made by operations are consistent with database constraints
+
+Isolation - Multiple transactions can happen at the same time without affecting the outcome of the other transactions
+
+Durability - All of the changes that are made by operations in a transaction will persist, no matter what
+
+## ACID Transactions in MongoDB
+
+Single-document operations are already atomic in mongodb
+
+updateOne() is technically a ACID transaction
+
+Multi-document ACID transactions, mongodb 'locks' resources involved in a transaction, thereby affecting performance cost and latency. It should only be used as a precise tool.
+
+To start a transaction, need to use start a session. Session is used to group database operations that are related to each other and should be run together
+
+A transaction has a maximum runtime of less than one minute after the first write
+
+```sh
+const session = db.getMongo().startSession()
+
+session.startTransaction()
+
+const account = session.getDatabase('bank').getCollection('accounts')
+
+account.updateOne( {account_id: "6066"}, {$inc: {balance: -30}})
+
+account.updateOne( {account_id: "4500"}, {$inc: {balance: 30}})
+
+session.commitTransaction()
+```
+
+```sh
+session.abortTransaction() # to cancel the transaction
+```
